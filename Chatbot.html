@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FRIDAY CHATBOT</title>
+    <style>
+        #chatLog{text-align: center;}
+        h2 {text-align: center;}
+    </style>
+    <script>
+        var know = {
+            "hello":"Hi",
+            "how are you?":"Good",
+            "john":"hi john"
+        };
+        function talk() {
+             var user =document.getElementById("userBox") .value;
+             document.getElementById("chatLog").innerHTML +=user+"<br>";
+            if(user in know){
+                document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+            } else{
+                document.getElementById("chatLog").innerHTML+="I am not a genius , ask me something that I know!<br>";}}
+    </script>
+</head>
+<body>
+<h1 id="chatLog">- - FRIDAY - - CHATBOT-  -<br></h1>
+<div style="text-align: center;"><input id="userBox" type="text" onkeydown="if(event.keyCode == 13){talk()}"></div>
+<h2>HELLO I AM FRIDAY , NAMAN'S PERSONAL CHATBOT<br>
+Ask me some questions!</h2>
+</body>
+</html>
